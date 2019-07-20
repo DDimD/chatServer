@@ -1,17 +1,75 @@
+<!DOCTYPE html>
 <html>
 
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=0">
 	<title>
 		Chat
 	</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap4/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 </head>
 
 <body>
-	<textarea id="chatMessages">
-	</textarea>
-	<textarea id="messageWriter">
+	<div class="container-fluid h-100">
+		<!-- Modal -->
+		<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+			aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLongTitle">Autorize in chat</h5>
+					</div>
+					<div class="modal-body">
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="basic-addon1">login</span>
+							</div>
+							<input type="text" class="form-control" placeholder="Nickname" aria-label="Nickname"
+								aria-describedby="basic-addon1" id="username">
+						</div>
+					</div>
 
-	</textarea>
-	<button id="sendMessage" onclick="sendMessage()"></button>
+					<div class="modal-footer">
+						<div class="col-sm mb-1 d-none text-danger" id="autorizationMessage">Username
+							already
+							used</div>
+						<button type="button" class="btn btn-primary" id="autorization">Autorization</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row justify-content-center h-80">
+			<div class="col-xs-12 col-xl-6 mt-3 mb-3 h-95">
+				<div class="card">
+					<div class="card-body" id="chatBox">
+					</div>
+				</div>
+				<!-- <textarea id="chatMessages">
+							</textarea> -->
+			</div>
+		</div>
+		<div class="row justify-content-center h-10">
+			<div class="col-9 col-xl-5 mt-2">
+				<textarea class="form-control" id="messageWriter" rows="3"></textarea>
+			</div>
+			<div class="col-3 col-xl-1 align-self-center">
+				<button type="button" class="btn btn-secondary btn-block" id="sendMessage">Send</button>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+	</script>
 </body>
 <script src="clientHandler.js"></script>
