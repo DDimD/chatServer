@@ -1,0 +1,43 @@
+textarea {
+    resize: none;
+}
+
+html, body {
+    height: 100%;
+}
+
+.card{
+    height: 100%;
+}
+
+.h-80{
+    height: 80%!important
+}
+
+.h-95{
+    height: 95%!important
+}
+
+.h-10{
+    height: 10%!important
+}
+
+#sendMessage,
+#sendMessage:active
+{
+    border-radius: 100px;
+    box-shadow: none;
+}
+
+.msgContainer{
+    margin-left: 5px;
+    padding: 10px;
+    max-width: 70%;
+    background-color: rgb(197, 197, 197);
+    border-radius: 5px
+    
+}
+
+#chatBox{
+    overflow-y: auto; 
+}
