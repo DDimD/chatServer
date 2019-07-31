@@ -27,8 +27,7 @@ $('#autorization').on('click', function () {
 
         if (event.code == 4018) {
             $('#exampleModalCenter').modal('show')
-        }
-        else if (!event.wasClean) {
+        } else if (!event.wasClean) {
             alert('Код: ' + event.code + ' причина: ' + event.reason)
         }
     };
@@ -41,11 +40,11 @@ $('#autorization').on('click', function () {
         var message = JSON.parse(event.data)
 
         var inputMessage = "<div class=\"d-flex justify-content-start mb-4\"\>\
-        <div class=\"userMsg\">"
-            + message.userName + ": " +
+        <div class=\"userMsg\">" +
+            message.userName + ": " +
             "</div>\
-        <div class=\"msgContainer\">"
-            + message.messageBody +
+        <div class=\"msgContainer\">" +
+            message.messageBody +
             "\</div\>\
     </div>"
         $('#chatBox').append(inputMessage).scrollTop($('#chatBox').prop('scrollHeight'));
@@ -91,8 +90,8 @@ $('#sendMessage').on('click', function () {
     $('#messageWriter').val("")
 
     var inputMessage = "<div class=\"d-flex justify-content-end mb-4\"\>\
-        <div class=\"msgContainer\">"
-        + message +
+        <div class=\"msgContainer\">" +
+        message +
         "\</div\>\
     </div>"
     $('#chatBox').append(inputMessage)
